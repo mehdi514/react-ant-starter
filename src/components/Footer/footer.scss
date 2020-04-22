@@ -1,0 +1,23 @@
+@import "../../variables.scss";
+
+.ant-layout {
+  .ant-layout-footer {
+    background: $white-color;
+    color: $black-color;
+    display: inline-flex;
+    justify-content: space-between;
+    font-weight: $font-weight + 100;
+    @media screen and (max-width: $screen-xs-max) {
+      display: block;
+    }
+    ul {
+      display: inline-flex;
+      list-style: none;
+      li {
+        margin-right: $margin - 20;
+        cursor: pointer;
+        font-weight: $font-weight + 100;
+      }
+    }
+  }
+}

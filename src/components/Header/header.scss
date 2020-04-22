@@ -1,0 +1,8 @@
+@import "../../variables.scss";
+
+.ant-layout-header {
+  &.header {
+    color: $black-color;
+    background: $white-color;
+  }
+}

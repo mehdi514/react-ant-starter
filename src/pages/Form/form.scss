@@ -1,0 +1,16 @@
+@import "../../variables.scss";
+
+.main-content {
+  padding: $padding - 10;
+  .ant-picker {
+    width: 100%;
+  }
+  .status {
+    font-size: $font + 1;
+    font-weight: $font-weight + 100;
+    margin-bottom: $margin - 20;
+  }
+  .ant-select {
+      margin-bottom: $margin - 20;
+  }
+}

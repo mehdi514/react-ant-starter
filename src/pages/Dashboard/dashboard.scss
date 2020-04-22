@@ -1,0 +1,256 @@
+@import "../../variables.scss";
+
+.main-content {
+  .ant-card {
+    &.world-class {
+      background-color: rgb(243, 193, 136);
+      height: 220px;
+      border-radius: $border-radius + 16;
+      padding: $padding;
+      margin: 0 $margin - 10;
+      .world-class-content {
+        font-size: $font + 7;
+        font-weight: $font-weight + 300;
+        color: $white-color;
+        font-family: $primary-font-family;
+        margin-bottom: $margin - 25;
+        @media screen and (max-width: $screen-xxxs) {
+          font-size: $font + 2 !important;
+        }
+        @media screen and (max-width: $screen-xxs-max) {
+          font-size: $font + 5;
+        }
+        @media screen and (max-width: $screen-xs-min) {
+          font-size: $font - 1 !important;
+        }
+        @media screen and (max-width: $screen-md-max) {
+          font-size: $font !important;
+        }
+      }
+      .article {
+        font-size: $font - 1;
+        color: $white-color;
+        font-family: $primary-font-family;
+        font-weight: $font-weight + 300;
+        cursor: pointer;
+        @media screen and (max-width: $screen-md-max) {
+          font-size: $font - 2 !important;
+        }
+        @media screen and (max-width: $screen-xxxs) {
+          font-size: $font - 2;
+        }
+        @media screen and (max-width: $screen-xs-min) {
+          font-size: $font - 8;
+        }
+      }
+      .workout {
+        width: 70px;
+        height: 120px;
+        background: transparent;
+      }
+    }
+    &.goal-card {
+      background-color: $white-color;
+      height: 220px;
+      border-radius: $border-radius + 16;
+      padding: $padding - 10;
+      .ant-card-header {
+        display: flex;
+        justify-content: space-between;
+        .icon {
+          cursor: pointer;
+        }
+        .header-title {
+          font-weight: $font-weight + 100;
+        }
+      }
+      .goals-content {
+        margin: auto;
+        text-align: center;
+        padding: $padding - 15 0 0 0;
+        border: $border-width + 8 $border-style rgb(242, 152, 3);
+        border-radius: 50%;
+        height: 160px;
+        width: 160px;
+        .goal-value {
+          font-size: $font + 26;
+          color: $black-color;
+          font-weight: $font-weight + 300;
+          &:after {
+            content: "";
+            position: absolute;
+            bottom: 92px;
+            left: 0;
+            right: 0;
+            width: 25px;
+            height: 5px;
+            margin: 0 auto;
+            border-radius: 44px;
+            background-color: rgb(255, 161, 98);
+          }
+        }
+        .number {
+          font-weight: $font-weight + 100;
+          font-size: $font;
+          color: rgb(159, 175, 206);
+        }
+      }
+    }
+  }
+  .activity-log {
+    padding: $padding - 10;
+    display: flex;
+    justify-content: space-between;
+    .ant-radio-group-solid {
+      .ant-radio-button-wrapper {
+        border: none;
+        background-color: transparent;
+        font-size: $font - 5;
+        color: $secondary-color;
+        &::before {
+          content: none;
+        }
+        @media screen and (max-width: $screen-xs-max) {
+          padding: 0 $padding - 25;
+        }
+      }
+      .ant-radio-button-wrapper-checked {
+        width: auto !important;
+        height: 25px !important;
+        line-height: $line-height;
+        border: $border-width + 1 $border-style darken($border-color, 15%) !important;
+        border-radius: $border-radius + 6;
+        color: rgb(111, 109, 157) !important;
+        padding: 0 $padding - 20;
+        font-size: $font - 4;
+        font-weight: bold;
+        background-color: transparent !important;
+        &:hover {
+          color: rgb(111, 109, 157);
+        }
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+    .activity-title {
+      color: rgb(91, 88, 143);
+    }
+  }
+  .graph-img {
+    margin: 0 $margin - 20;
+    @media screen and (max-width: $screen-xs-max) {
+      width: 350px;
+    }
+    @media screen and (max-width: $screen-xxxs) {
+      width: 250px !important;
+    }
+    @media screen and (max-width: $screen-xxs) {
+      width: 300px;
+    }
+  }
+  .footer-cards {
+    margin-bottom: $margin - 10;
+    padding: 0 $padding;
+    @media screen and (max-width: $screen-md-max) {
+      padding: 0 $padding - 20;
+    }
+    .card-stat {
+      border-radius: $border-radius + 6;
+      padding: $padding - 20 $padding - 10;
+      @media screen and (max-width: $screen-xs-min) {
+        margin-bottom: $margin - 15;
+        padding: $padding - 10 $padding - 20;
+      }
+      .header {
+        display: inline-flex;
+        margin-bottom: $margin - 20;
+        .icon {
+          font-size: $font + 6;
+          margin-right: $margin - 25;
+          &.load-icon {
+            color: $warning-color;
+            border: $border-width + 9 $border-style rgb(254, 248, 229);
+            background-color: rgb(254, 248, 229);
+            border-radius: 50%;
+          }
+          &.hours-icon {
+            color: $primary-color;
+            border: $border-width + 9 $border-style rgb(229, 238, 250);
+            background-color: rgb(229, 238, 250);
+            border-radius: 50%;
+          }
+          &.heart-icon {
+            color: $danger-color;
+            border: $border-width + 9 $border-style rgb(253, 229, 230);
+            background-color: rgb(253, 229, 230);
+            border-radius: 50%;
+          }
+        }
+        .card-text {
+          .percentage {
+            color: $warning-color;
+            font-weight: bold;
+            font-size: $font;
+            @media screen and (max-width: $screen-md-max) {
+              font-size: $font - 4;
+            }
+          }
+          .level {
+            font-size: $font - 2;
+            color: rgb(163, 178, 208);
+            font-family: Arial, Helvetica, sans-serif;
+            @media screen and (max-width: $screen-md-max) {
+              width: 50px;
+              text-overflow: ellipsis;
+              font-size: 11px;
+              display: inline-block;
+              white-space: nowrap;
+              overflow: hidden;
+            }
+            @media screen and (max-width: $screen-xs-max) {
+              width: 120px;
+            }
+          }
+          .hours {
+            color: $primary-color;
+            font-weight: bold;
+            font-size: $font;
+            @media screen and (max-width: $screen-md-max) {
+              font-size: $font - 4;
+            }
+          }
+          .heart-rate {
+            color: $danger-color;
+            font-weight: bold;
+            font-size: $font;
+            @media screen and (max-width: $screen-md-max) {
+              font-size: $font - 4;
+            }
+          }
+        }
+      }
+      p {
+        color: rgb(207, 207, 217);
+        font-size: $font - 1;
+        @media screen and (max-width: $screen-md-max) {
+          font-size: $font - 2;
+        }
+      }
+    }
+    @media screen and (max-width: $screen-xs-max) {
+      padding: 0 $padding - 20;
+    }
+  }
+}
+.card-header {
+  padding: $padding - 6;
+}
+
+.ant-card {
+  margin: $margin - 20;
+}
+
+.ant-card-body {
+  padding: 0;
+}

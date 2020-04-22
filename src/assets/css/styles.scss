@@ -1,0 +1,21 @@
+@import "../../variables.scss";
+.wrapper {
+  padding: $padding $padding - 10 $padding $padding - 10;
+  background-color: rgb(226, 236, 252);
+  border-radius: $border-radius;
+  .card-wrapper {
+    background-color: rgb(238, 243, 249);
+    border-radius: $border-radius;
+  }
+}
+.card-header {
+  padding: $padding - 6;
+}
+
+.ant-card {
+  margin: $margin - 20;
+}
+
+.ant-card-body {
+  padding: 0;
+}
